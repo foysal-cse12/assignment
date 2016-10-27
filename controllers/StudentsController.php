@@ -105,7 +105,8 @@ class StudentsController extends Controller
             {
                 $model->userid = $model_users->id;
                 $model->save();
-                return $this->redirect(['/students/index']);
+                //return $this->redirect(['/students/index']);
+                return $this->redirect(['view', 'id' => $model->id]);
             }
             else
             {
